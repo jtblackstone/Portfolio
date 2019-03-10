@@ -1,0 +1,138 @@
+html,body {
+	width:100%;
+  height: 5000px;
+}
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none !important;
+
+}
+
+.fixed-background {
+  display: block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position:fixed;
+  background-image:url('../img/mountain1_v2.jpg');
+  background-size: 1920px 1080px;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+#name {
+  margin:auto;
+  margin-top: 20px;
+  text-align:center;
+  font-size:42px;
+}
+
+#lname {
+  font-size:52px;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+header {
+  padding-top:10px;
+}
+
+.airplane {
+  clip-path:
+}
+
+.fa-paper-plane-o {
+  padding-left: 8px;
+}
+
+
+.glyphicon-envelope {
+  margin-left:20px;
+}
+
+h2 {
+  font-size:24px;
+  font-family:Helvetica,Arial, sans-serif;
+  text-align: center;
+}
+
+.glyphicon-home{
+  font-size:36px;
+  color:#fff;
+  display:block;
+  border:0px;
+  float:right;
+  margin-right:20px;
+}
+
+#home {
+  z-index:9999;
+  position:fixed;
+  right:30px;
+  bottom: 30px;
+  display:none;
+  padding: 15px;
+  background-color:rgba(0, 0, 0, 0.2);
+}
+
+#home a:link,#home a:visited,#home a:hover,#home a:active {
+  color:#fff;
+  text-decoration:none;
+}
+
+.wrapper {
+  margin:auto;
+  text-align:center;
+  
+}
+
+.wrapper-proj {
+  text-align: center;
+}
+
+.footer_info {
+  font-size:24px;
+  font-family:Helvetica, Arial, sans-serif;
+  margin:auto;
+  text-align:center;
+  line-height:36px;
+}
+
+.glory {
+  font-size:36px;
+}
+
+.horizontal {
+  list-style:none;
+}
+
+ .horizontal li {
+  float:left;
+ }
+
+ .horizontal li a {
+  display:block;
+  padding: 15px;
+  color:#fff;
+ }
+
+ .horizontal li a.active {
+  border-bottom: 4px solid #fff;
+ }
+
+ .navSec {
+  padding-right: 40px;
+  font-size:18px;
+  text-decoration: none;
+ }
+
+ .intro {
+  height: 300px;
+  color: #fff;
+ }
+
+ .lorem {
+  font-size: 18px;
+  color: #000;
+  text-align: center;
+ }
