@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Lab 8</title>
+	<meta http-equiv="content-type" 
+		content="text/html;charset=utf-8" />
+<script language="javascript">
+var clock = new Date();
+var hours=clock.getHours();
+var minutes=clock.getMinutes();
+var seconds=clock.getSeconds();
+var amhours=12;
+var timestring=" ";
+
+function setTime(timeFormat){
+	var AMPM = (hours < 12 ) ? "AM" : "PM";
+	amhours = ( hours == 0 ) ? 12 : hours;
+	amhours = ( hours > 12 ) ? hours - 12 : hours;
+	minutes = ( minutes < 10 ? "0" : "" ) + minutes;
+	seconds = ( seconds < 10 ? "0" : "" ) + seconds;
+
+	if(timeFormat == 'MI'){
+		timestring=hours + ":" + minutes + ":" + seconds;
+	}
+	else
+		timestring=amhours + ":" + minutes + ":" + seconds + AMPM;
+}
+
+function displayTime(timeFormat){
+	setTime(timeFormat);
+	alert(timestring);
+}
+</script>
+</head>
+<body>
+<script language="javascript">
+	displayTime(prompt("Enter AM for normal time, MI for military time",""));
+</script>
+</body>
+</html>

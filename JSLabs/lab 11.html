@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	  
+<html>
+<head>
+	<title>Lab 11</title>
+	<meta http-equiv="content-type" 
+		content="text/html;charset=utf-8" />
+<script language="javascript">
+	function roomType(){
+		for (i=0;i<document.form1.roomtype.length;i++){
+		if (document.form1.roomtype[i].checked==true)
+		return document.form1.roomtype[i].value;
+		}
+	}
+	
+	function selectedRoom(){
+		for (i=0;i<document.form1.roomtype.length;i++){
+		if (document.form1.roomtype[i].checked==true)
+		return true;
+		}
+		return false;
+	}
+	
+	function zipIsNum(){
+		return /^\d{5}(-\d{4})?$/.test(document.form1.zip.value);
+	}
+	
+	function returnActivityString(){
+	var activitystring = "";
+		
+		for (i=0;i<document.form1.activity.length;i++){
+		if (document.form1.activity[i].checked==true)
+		activitystring += document.form1.activity[i].value + " ";
+		}
+	return activitystring;
+	}
+	
+	function verify(){
+		if(selectedRoom() && zipIsNum() && document.form1.username.value.length > 0){
+		var info = "Type of room: " + roomType() + "\nActivities: "+returnActivityString()+"\nHotel: "+ document.form1.hotel.value +"\nName: "+document.form1.username.value+"\nZip Code: "+document.form1.zip.value;
+		
+			document.form1.results.value=info;
+		}
+		else
+		alert("Please fill in all fields!");
+		return false;  //To prevent the browser from actually submitting
+	}
+</script>
+</head>
+<body>
+<form name="form1" onsubmit="return verify()" method="post">
+	Type of room:<br>	
+	<input type="radio" name="roomtype" value="Standard">Standard<br>
+	<input type="radio" name="roomtype" value="Deluxe">Deluxe<br>
+	<input type="radio" name="roomtype" value="Suite">Suite<br><br>
+	
+	Activity:<br>
+	Swim <input type="checkbox" name="activity" value="Swim"><br>
+	Boat <input type="checkbox" name="activity" value="Boat"><br>
+	Tour <input type="checkbox" name="activity" value="Tour"><br><br>
+	
+	Pick a hotel:<br>
+	<select name="hotel">
+	<option value="Hampton Inn">Hampton Inn</option>
+	<option value="Hilton">Hilton</option>
+	<option value="Comfort Inn">Comfort Inn</option>
+	</select>
+	<br><br>
+	
+	Name: <input type="text" name="username"><br>
+	Zip Code: <input type="text" name="zip" size="5" maxlength="5"><br>
+	
+	Results:<br>
+	<textarea name="results" cols="40" rows="5">
+	Results appear here.
+	</textarea><br>
+	
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
