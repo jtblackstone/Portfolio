@@ -1,0 +1,297 @@
+@font-face {
+  font-family: helv_roman;
+  src: url(../fonts/HelveticaInseratLTStd-Roman.otf); }
+
+@font-face {
+  font-family: archer;
+  src: url(../fonts/Archer-Bold-Pro.otf); }
+
+@font-face {
+  font-family: archerLt;
+  src: url(../fonts/Archer-XLight-Pro.otf); }
+
+@font-face {
+  font-family: archerMd;
+  src: url(../fonts/Archer-Medium-Pro.otf); }
+
+@font-face {
+  font-family: helv_lt;
+  src: url(../fonts/HelveticaNeueLTCom-Lt.ttf); }
+
+html, body {
+  width: 100%;
+  height: 5000px; }
+
+header {
+  padding-top: 10px; }
+
+h2 {
+  font-size: 80px;
+  font-family: archerLt;
+  text-transform: uppercase;
+  text-align: left; }
+
+h3 {
+  font-size: 60px;
+  font-family: archerMd;
+  text-transform: uppercase;
+  text-align: left; }
+
+h4 {
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 24px;
+  font-family: archer; }
+
+label, a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px; }
+
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none !important;
+  color: #fff; }
+
+.hide {
+  display: none !important; }
+
+#nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 0.3s linear;
+  z-index: 9999; }
+
+#nav.whitenav {
+  background-color: #fff; }
+
+.myName {
+  font-size: 80px;
+  font-family: archerLt; }
+
+.myJob {
+  font-size: 60px;
+  font-family: archer; }
+
+.intro {
+  margin-top: 10px; }
+
+#intro h2 {
+  font-size: 64px; }
+
+#intro h3 {
+  font-size: 48px; }
+
+#intro p {
+  color: #fff; }
+
+.summary {
+  font-family: helv_lt;
+  font-size: 16px; }
+
+.intro {
+  font-family: helv_lt;
+  font-size: 18px;
+  color: #666666; }
+
+.mechra {
+  color: #fff;
+  margin-top: 26px;
+  margin-left: 10px;
+  font-size: 16px;
+  line-height: 12px;
+  font-family: helv_roman; }
+
+.mr_logo {
+  display: inline-block; }
+
+.logo1, .logo2 {
+  float: left; }
+
+.fixed-background {
+  display: block;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: fixed;
+  background-image: url("../img/mountain1_v2.jpg");
+  background-size: 1920px 1080px;
+  background-repeat: no-repeat;
+  z-index: 0;
+  float: right; }
+
+#name {
+  margin: auto;
+  margin-top: 100px;
+  text-align: center;
+  color: #fff; }
+
+.fa-paper-plane-o {
+  padding-left: 8px; }
+
+.glyphicon-envelope {
+  margin-left: 20px; }
+
+.wrapper {
+  margin: auto;
+  text-align: center; }
+
+.hireme {
+  margin-top: 50px;
+  margin-bottom: 60px;
+  text-decoration: none;
+  border: 0;
+  border-radius: 0; }
+  .hireme:hover {
+    background-color: #34c59a;
+    color: #fff; }
+  .hireme:active {
+    background-color: #34c59a;
+    color: #fff;
+    border: 0; }
+  .hireme:hover:active {
+    background-color: #34c59a;
+    color: #fff; }
+
+.btn-default {
+  font-family: archerLt;
+  font-size: 35px;
+  color: #fff;
+  background-color: #34c59a;
+  padding: 2px 12px; }
+
+.btn-default .glyphicon-menu-right {
+  line-height: 1em;
+  font-size: 28px;
+  padding-top: 2px; }
+
+.wrapper-proj {
+  text-align: center; }
+
+.footer_info {
+  font-size: 24px;
+  font-family: Helvetica, Arial, sans-serif;
+  margin: auto;
+  text-align: center;
+  line-height: 36px; }
+
+.horizontal {
+  list-style: none; }
+
+.horizontal li {
+  float: left; }
+
+.horizontal li a {
+  display: block;
+  padding: 15px;
+  color: #fff; }
+
+.horizontal li a.active {
+  border-bottom: 4px solid #fff; }
+
+.navSec {
+  padding-right: 40px;
+  padding-bottom: 100px;
+  font-size: 18px;
+  text-decoration: none; }
+
+.on-top {
+  z-index: 1;
+  position: relative; }
+
+#bio {
+  color: #000;
+  font-size: 16px;
+  font-family: archer;
+  background-color: #c9c8c9;
+  text-align: left;
+  padding-bottom: 70px; }
+
+.intro_b {
+  background-color: #acabb3;
+  position: relative;
+  z-index: 1; }
+
+#about {
+  padding-top: 80px; }
+
+.lorem {
+  font-size: 18px;
+  color: #000;
+  text-align: center; }
+
+.con_us, form {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 120px; }
+
+#wrapper {
+  width: 1400px; }
+
+.skill-wrapper {
+  font-family: archerMd;
+  font-size: 16x; }
+
+.skill-pt {
+  line-height: 36x; }
+
+#skills {
+  background-color: #fff; }
+
+#skills .container {
+  transform: translateY(-58px); }
+
+#skills h4 {
+  width: 120px;
+  text-align: center;
+  margin: 15px auto;
+  /* this is how we put the lines under the coding language */ }
+
+#skills h4:after {
+  content: "";
+  display: block;
+  width: 32px;
+  height: 1px;
+  background-color: #666;
+  margin: 10px auto; }
+
+#skills .wrapper-circle {
+  background-color: #fff;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+  text-align: center; }
+
+.util_icons {
+  margin-top: 20px; }
+
+#skills .skill-pt {
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
+  border: solid 1px #666666;
+  float: left;
+  margin-right: 4px;
+  opacity: 0.6; }
+
+#skills .skill-pt.on {
+  opacity: 1; }
+
+#skills .skill-pt:after {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: #666666;
+  border-radius: 100%;
+  margin: 1px 0px 0px 1px; }
+
+.contact_me {
+  background-color:#cccccc;
+}
+
+.withme {
+  color:#006666;
+}
