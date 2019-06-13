@@ -1,0 +1,83 @@
+/* boilerplate - normalizer */
+
+
+/* text styling */
+
+body {                                 
+
+    font-size: 28px;
+    background-color: #111;
+    font-family: Arial, Helvetica, sans-serif;
+    color: antiquewhite
+    
+
+}
+
+header {
+
+    text-align: center;
+    font-size: 16px;
+
+}
+
+#playerText {
+
+    background-color: #111;
+    color:#fff;
+    outline: none;
+    border: none;
+    text-indent: 8px;
+
+}
+/* positioning */
+
+.inputDiv {
+
+    position: absolute;
+    left: 40%;
+
+}
+
+.gameDiv{
+
+    margin-right: 36em;
+    overflow-y: auto;
+    max-height: 800px;
+    margin-top: 25px;
+
+}
+
+/* sizing */
+
+input {
+
+    width: 24em;
+    height: 2.6em;
+
+}
+
+/* buttons */
+
+#submitButton {
+
+    background-color: #4CAF50;
+    font-size: 18px;
+    border-radius: 12px;
+    border: 2px solid #fff;
+
+}
+
+
+
+/* mobile */
+
+
+
+
+
+
+
+
+
+
+
