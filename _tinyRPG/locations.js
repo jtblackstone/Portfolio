@@ -15,7 +15,7 @@ var rooms = {
         // shovel needed to dig, get canteen, enter water, fill canteen
     },
     "oasis": {
-        "description": "There is a pool of water\ and a canteen beside the pool and a shovel",
+        "description": "There is a pool of <b>water</b>\ and a canteen beside the pool and a shovel",
         "directions": {
             "west": "begin",
             "north": "You are lost in the desert",

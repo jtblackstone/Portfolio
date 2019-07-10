@@ -20,6 +20,20 @@ header {
 
 }
 
+#descText {
+
+    margin-bottom: 80px;
+
+}
+
+#interact {
+
+    display: block;
+
+}
+
+
+
 #playerText {
 
     background-color: #111;
@@ -33,21 +47,25 @@ header {
 
 .inputDiv {
 
-    position: absolute;
-    left: 40%;
+   /* position: absolute; 
+    left: 40%;*/
 
 }
 
 .gameDiv{
 
-    margin-right: 36em;
+    margin-right: 48em;
     overflow-y: auto;
-    max-height: 800px;
-    margin-top: 25px;
 
 }
 
 /* sizing */
+
+.col-xl-10 {
+
+    max-width: 960px;
+
+}
 
 input {
 

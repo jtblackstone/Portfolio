@@ -1,4 +1,5 @@
 // locations will migrate back to its own js file eventually
+// reegx to parse words rather than limiting teh dictionary
 
 const rooms = {
 
@@ -8,7 +9,7 @@ const rooms = {
 
         "description": "You are standing next to a camel path\
         in a hot and lonely stretch of desert\
-        The path continues to the <b>east<b>,\ and you see a smudge in the distance to the <b>north</b>",
+        The path continues to the <b>east</b>,\ and you see a smudge in the distance to the <b>north</b>",
 
         "directions": {
             "east": "oasis",
@@ -78,19 +79,39 @@ const rooms = {
 
 let firstTroom = "begin";
 let userInput = ["go", "north", "east", "south", "west", "get", "pickup", "inventory", "say", "attack", "up", "down"];
+let history = [];
 let inventory = ["canteen", "shovel", "torch", "lantern", "lighter", "matches", "rope", "sceptre"];
 let playerInput;
 let currentGameText;
 let currentGameState = { "begin": false, "name": true, "oasis": false, "boulder": false };
 
+var input = document.getElementById("playerText");
+
 /* const player = require("./player.js");
 const Item = require("./item.js").default.default;              // from when I was building in node. will return to building it in node soon
 const locations = require("./locations.js");
+
+
 */
+
+
+
 
 $(document).ready(function () {
 
     setText("Choose a character name: ");           // game begins on page load, will change to a start button later
+
+
+    /*  function KeyboardHandler(event) {
+  
+          if (event.keycode == 13) {
+  
+              MyFunction()
+  
+          }
+  
+      } */
+
 
     $("#submitButton").click(function () {          // enter a char name. Name will be repeated back, inserted into various speeches 'Bob, you are standing lorem ipsum
 
@@ -101,8 +122,16 @@ $(document).ready(function () {
             const playerName = playerInput;
             currentGameState["name"] = false;       // setting the starting state of the character name, location
             currentGameState["begin"] = true;
+            history.push("begin");
+            console.log(playerInput);
             currentGameText = rooms["begin"].description;       // giving the beginning description
             setText(playerName + ", " + currentGameText);
+
+
+
+            console.log('history:', history);
+
+
 
 
         }
@@ -132,26 +161,40 @@ $(document).ready(function () {
     }
 
     function chooseBeginDir(direction) {
+        const chooseDir = direction.toLowerCase(); // assign toLowerCase in one place, apply to all
+        console.log(chooseDir);
+        if (chooseDir !== "go back") {
 
-        console.log(direction.toLowerCase());
+            history.push(chooseDir);
+        }
 
-        if (direction.toLowerCase() === "east") {
+        console.log('history:', history);
+
+        if (chooseDir === "east") {
 
             currentGameState["oasis"] = true;
             beginOasis();
 
         }
 
-        else if (direction.toLowerCase() === "north") {
+        else if (chooseDir === "north") {
 
             currentGameState["boulder"] = true;
             beginBoulder();
 
         }
 
-        else if (direction.toLowerCase() === "south" || direction.toLowerCase() === "west") {       // if you enter a dir that doesn't lead to a proper loc then you are lost
+        else if (chooseDir === "south" || chooseDir === "west") {       // if you enter a dir that doesn't lead to a proper loc then you are lost, history to reverse directions
 
             setText("You are lost in the desert")
+
+        }
+
+        else if (chooseDir === "go back") {
+
+            var prevDir = history.pop();
+            console.log('history:', history);
+            console.log(prevDir);
 
         }
 

@@ -5,9 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>TinyRPG's</title>
+    <title>TinyRPG</title>
+    <link rel="stylesheet" type="text/css" href="normalize.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
     <!-- <script type="text/javascript" src="locations.js"></script>-->
     <script type="text/javascript" src="script.js"></script>
     <!--<script type="text/javascript" src="item.js"></script>
@@ -22,19 +29,22 @@
         </div>
 
 
+        <div id="interact" class="container clearfix visible-xs text-center pagination-centered">
+            <div class="row">
+                <div class="inputDiv col-xs-10 col-xl-10">
 
-        <div class="inputDiv">
+                    <input id="playerText" placeholder="What do you wish to do?"></input>
 
-            <input id="playerText" placeholder="What do you wish to do?"></input>
+                    <button id="submitButton">Submit</button>
 
-            <button id="submitButton">Submit</button>
+                </div>
 
-        </div>
+                <div class="gameDiv col-xs-2 col-xl-2">
 
-        <div class="gameDiv">
+                    <span id="gameText" style="color: white;"></span>
 
-            <span id="gameText" style="color: white;"></span>
-
+                </div>
+            </div>
         </div>
 
     </header>
